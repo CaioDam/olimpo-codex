@@ -28,6 +28,29 @@ body {
 
 .hidden {display:none !important;}
 
+.tree {
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  gap:50px;
+  padding:40px;
+}
+
+.level {
+  display:flex;
+  justify-content:center;
+  gap:30px;
+  flex-wrap:wrap;
+}
+
+/* linha vertical */
+.connector {
+  width:4px;
+  height:50px;
+  background:linear-gradient(gold, orange);
+  box-shadow:0 0 15px gold;
+  border-radius:10px;
+}
 /* MENU */
 #menu {
   height:100vh;
@@ -59,15 +82,6 @@ body {
   transform:scale(1.1);
   box-shadow:0 0 20px gold;
 }
-
-/* GRID */
-.grid {
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(230px,1fr));
-  gap:25px;
-  padding:30px;
-}
-
 /* CARD MODERNO */
 .card {
   background:linear-gradient(145deg,#111,#1c1c1c);
@@ -164,4 +178,86 @@ body {
 
 #codex-text li {
   color:#ccc;
+}
+
+/* CONTAINER DA ÁRVORE */
+.tree-container {
+  position: relative;
+}
+
+/* LINHAS */
+.lines {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+/* ESTILO DAS LINHAS */
+.lines line {
+  stroke: gold;
+  stroke-width: 2;
+  opacity: 0.3;
+  stroke-dasharray: 10;
+  animation: dash 5s linear infinite;
+}
+
+/* ANIMAÇÃO */
+@keyframes dash {
+  to {
+    stroke-dashoffset: -100;
+  }
+}
+.tree {
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  gap:40px;
+  padding:40px;
+}
+
+.level {
+  display:flex;
+  justify-content:center;
+  gap:30px;
+  flex-wrap:wrap;
+}
+
+/* LINHAS */
+.connector {
+  width:4px;
+  height:40px;
+  background:gold;
+  box-shadow:0 0 10px gold;
+}
+
+/* CARDS */
+.card {
+  width:200px;
+  background:#111;
+  border-radius:20px;
+  overflow:hidden;
+  cursor:pointer;
+  transition:0.3s;
+  box-shadow:0 10px 20px rgba(0,0,0,0.6);
+}
+
+.card img {
+  width:100%;
+  height:250px;
+  object-fit:cover;
+}
+
+.card h3 {
+  text-align:center;
+  padding:10px;
+}
+
+.card:hover {
+  transform:scale(1.08);
+  box-shadow:0 0 20px gold;
+}
+
+.special {
+  border:2px solid red;
 }
