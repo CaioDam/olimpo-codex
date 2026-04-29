@@ -1,0 +1,167 @@
+* {
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: radial-gradient(circle at top, #0a0f2a, #000);
+  color: white;
+}
+
+/* FUNDO ANIMADO */
+.bg-effects {
+  position: fixed;
+  width:100%;
+  height:100%;
+  background: radial-gradient(circle, rgba(255,215,0,0.07) 1px, transparent 1px);
+  background-size: 30px 30px;
+  animation: moveBg 20s linear infinite;
+  z-index:-1;
+}
+
+@keyframes moveBg {
+  from {background-position:0 0;}
+  to {background-position:300px 300px;}
+}
+
+.hidden {display:none !important;}
+
+/* MENU */
+#menu {
+  height:100vh;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+}
+
+#menu h1 {
+  font-family: 'Orbitron';
+  font-size:3rem;
+  color:gold;
+  text-shadow:0 0 20px gold;
+}
+
+#menu button {
+  margin-top:20px;
+  padding:15px 30px;
+  background:linear-gradient(45deg, gold, orange);
+  border:none;
+  border-radius:10px;
+  cursor:pointer;
+  font-weight:bold;
+  transition:0.3s;
+}
+
+#menu button:hover {
+  transform:scale(1.1);
+  box-shadow:0 0 20px gold;
+}
+
+/* GRID */
+.grid {
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(230px,1fr));
+  gap:25px;
+  padding:30px;
+}
+
+/* CARD MODERNO */
+.card {
+  background:linear-gradient(145deg,#111,#1c1c1c);
+  border-radius:20px;
+  overflow:hidden;
+  cursor:pointer;
+  transition:0.4s;
+  position:relative;
+  box-shadow:0 10px 25px rgba(0,0,0,0.6);
+}
+
+/* brilho dourado */
+.card::before {
+  content:"";
+  position:absolute;
+  inset:0;
+  border-radius:20px;
+  padding:2px;
+  background:linear-gradient(45deg,transparent,gold,transparent);
+  opacity:0;
+  transition:0.4s;
+}
+
+/* IMAGEM */
+.card img {
+  width:100%;
+  height:260px;
+  object-fit:cover;
+  transition:0.4s;
+}
+
+/* TEXTO */
+.card h3 {
+  text-align:center;
+  padding:15px;
+  font-weight:500;
+}
+
+/* HOVER */
+.card:hover {
+  transform:translateY(-10px) scale(1.04);
+}
+
+.card:hover img {
+  transform:scale(1.1);
+  filter:brightness(1.1);
+}
+
+.card:hover::before {
+  opacity:1;
+}
+
+/* ESPECIAL */
+.special {
+  border:2px solid red;
+}
+
+/* CODEX */
+#codex {
+  position:fixed;
+  inset:0;
+  background:rgba(0,0,0,0.9);
+  display:flex;
+  justify-content:center;
+  align-items:center;
+}
+
+.codex-content {
+  background:#111;
+  padding:25px;
+  border-radius:15px;
+  border:2px solid gold;
+  width:380px;
+  animation:fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+  from {opacity:0; transform:scale(0.9);}
+  to {opacity:1; transform:scale(1);}
+}
+
+.close-btn {
+  float:right;
+  background:none;
+  border:none;
+  color:gold;
+  font-size:18px;
+  cursor:pointer;
+}
+
+#codex-text p {
+  margin-bottom:10px;
+}
+
+#codex-text li {
+  color:#ccc;
+}

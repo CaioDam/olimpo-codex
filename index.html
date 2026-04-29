@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<title>Olimpo Codex ⚡</title>
+
+<link rel="stylesheet" href="style.css">
+
+<!-- FONTE MODERNA -->
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600&family=Poppins:wght@300;500&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+<div class="bg-effects"></div>
+
+<!-- MENU -->
+<div id="menu">
+  <h1>⚡ OLIMPO ⚡</h1>
+  <button onclick="startGame()">Entrar no Codex</button>
+</div>
+
+<!-- MAIN -->
+<div id="main" class="hidden">
+
+  <section class="grid">
+
+    <!-- (SEUS CARDS - NÃO ALTEREI LINKS) -->
+
+    <div class="card" onclick="openCodex('zeus')"><img src="https://static.wikia.nocookie.net/hades_gamepedia_en/images/3/3c/Zeus.png/revision/latest/scale-to-width-down/1000?cb=20200710034046"><h3>Zeus ⚡</h3></div>
+    <div class="card" onclick="openCodex('hera')"><img src="https://static.wikia.nocookie.net/hades_gamepedia_en/images/5/56/Hera.png/revision/latest?cb=20251011162938"><h3>Hera 👑</h3></div>
+    <div class="card" onclick="openCodex('poseidon')"><img src="https://static.wikia.nocookie.net/hades_gamepedia_en/images/4/43/Poseidon.png/revision/latest/scale-to-width-down/1000?cb=20200710034221"><h3>Poseidon 🌊</h3></div>
+    <div class="card" onclick="openCodex('hades')"><img src="https://static.wikia.nocookie.net/hades_gamepedia_en/images/6/64/Hades.png/revision/latest?cb=20210207072259"><h3>Hades 💀</h3></div>
+    <div class="card" onclick="openCodex('demeter')"><img src="https://static.wikia.nocookie.net/hades_gamepedia_en/images/0/03/Demeter.png/revision/latest?cb=20200125232225"><h3>Deméter 🌾</h3></div>
+    <div class="card" onclick="openCodex('athena')"><img src="https://static.wikia.nocookie.net/hades_gamepedia_en/images/6/68/Athena.png/revision/latest?cb=20200710034316"><h3>Atena 🦉</h3></div>
+    <div class="card" onclick="openCodex('apollo')"><img src="https://static.wikia.nocookie.net/hades_gamepedia_en/images/1/14/Apollo.png/revision/latest/scale-to-width-down/1000?cb=20240418151602"><h3>Apolo ☀️</h3></div>
+    <div class="card" onclick="openCodex('artemis')"><img src="https://static.wikia.nocookie.net/hades_gamepedia_en/images/d/d2/Artemis.png/revision/latest/scale-to-width-down/1000?cb=20200710034407"><h3>Ártemis 🌙</h3></div>
+    <div class="card" onclick="openCodex('ares')"><img src="https://static.wikia.nocookie.net/hades_gamepedia_en/images/0/05/Ares.png/revision/latest/scale-to-width-down/1000?cb=20200707190231"><h3>Ares ⚔️</h3></div>
+    <div class="card" onclick="openCodex('hephaestus')"><img src="https://static.wikia.nocookie.net/hades_gamepedia_en/images/2/25/Hephaestus.png/revision/latest/scale-to-width-down/1000?cb=20240418154332"><h3>Hefesto 🔥</h3></div>
+    <div class="card" onclick="openCodex('aphrodite')"><img src="https://static.wikia.nocookie.net/hades_gamepedia_en/images/c/c6/Aphrodite.png/revision/latest?cb=20200707184521"><h3>Afrodite 💕</h3></div>
+    <div class="card" onclick="openCodex('hermes')"><img src="https://static.wikia.nocookie.net/hades_gamepedia_en/images/0/0d/Hermes.png/revision/latest/scale-to-width-down/1000?cb=20190611191517"><h3>Hermes 🪽</h3></div>
+    <div class="card" onclick="openCodex('dionysus')"><img src="https://static.wikia.nocookie.net/hades_gamepedia_en/images/9/90/Dionysus.png/revision/latest/scale-to-width-down/1000?cb=20190215155410"><h3>Dionísio 🍷</h3></div>
+
+    <div class="card special" onclick="openCodex('hercules')"><img src="https://static.wikia.nocookie.net/hades_gamepedia_en/images/a/ab/Heracles.png/revision/latest/scale-to-width-down/1000?cb=20240517221035"><h3>Hércules 💪</h3></div>
+    <div class="card special" onclick="openCodex('zagreus')"><img src="https://static.wikia.nocookie.net/hades_gamepedia_en/images/2/21/Portraits_ZagreusPresent_Default_01.png/revision/latest?cb=20250929045336"><h3>Zagreus 🔥</h3></div>
+
+  </section>
+
+</div>
+
+<!-- CODEX -->
+<div id="codex" class="hidden">
+  <div class="codex-content">
+    <button class="close-btn" onclick="closeCodex()">✖</button>
+    <h2 id="codex-title"></h2>
+    <div id="codex-text"></div>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
